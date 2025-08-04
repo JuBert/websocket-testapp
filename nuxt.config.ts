@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     modules: ['@vueuse/nuxt'],
     ssr: true,
     nitro: {
-        preset: 'vercel',
+        preset: 'node-server',
         experimental: {
             websocket: true,
         },

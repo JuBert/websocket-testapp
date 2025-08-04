@@ -4,6 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "start": "node .output/server/index.mjs",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -14,5 +15,8 @@
     "vue": "^3.5.18",
     "vue-router": "^4.5.1",
     "@vueuse/nuxt": "^13.6.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

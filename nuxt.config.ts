@@ -3,9 +3,11 @@ export default defineNuxtConfig({
     compatibilityDate: '2025-07-15',
     devtools: { enabled: true },
     modules: ['@vueuse/nuxt'],
+    ssr: true,
     nitro: {
+        preset: 'vercel',
         experimental: {
-        websocket: true,
+            websocket: true,
         },
     },
 })

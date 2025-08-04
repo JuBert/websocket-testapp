@@ -4,12 +4,12 @@ const { status, data, send, open, close} = useWebSocket(`wss://${location.host}/
 
 const history = ref<string[]>([])
 watch(data, (newValue) => {
-    history.value.push(`server: ${newValue}`)
+    history.value.push(`${newValue}`)
 })
 
 const message = ref('')
 const sendData = () => {
-    send(message.value)
+    send(`${name.value}: ${message.value}`)
     history.value.push(`${name.value}: ${message.value}`)
     message.value = ''
 }

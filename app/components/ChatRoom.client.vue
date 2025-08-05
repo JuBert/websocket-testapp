@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const name = useName()
-const { status, data, send, open, close } = useWebSocket(`ws://${location.host}/api/websocket`)
+const { status, data, send, open, close } = useWebSocket(`wss://${location.host}/api/websocket`)
 
 const history = useHistory()
 watch(data, (newValue) => {
